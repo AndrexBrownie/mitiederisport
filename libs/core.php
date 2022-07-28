@@ -1,15 +1,19 @@
 <?php
 
 namespace Libs;
+//use App\Controllers\HomeController;
 
 class Core
 {
 
     public function __construct()
     {
+
+        //$url = $_GET['url'];
         $url = isset($_GET['url'])  ? $_GET['url'] : null;
         $url = rtrim($url, "/");
         $url = explode('/', $url);
+
 
         if (empty($url[0])) {
 
@@ -41,16 +45,22 @@ class Core
                     } else {
                         $controller->{$url[1]}($param);
                     }
+                    //echo "La acción  {$url[1]} SI xiste";
                 } else {
                     echo "La acción  {$url[1]} NO xiste";
                 }
             } else {
                 $controller->index();
             }
+
+            //echo "Controlador: {$url[0]} Si existe";
+
         } else {
 
             echo "Controlador: {$url[0]} No existe";
         }
+
+        //echo "<pre>", print_r($url), "</pre>";
         myEchoPre($url);
         myEchoDump($url);
     }
