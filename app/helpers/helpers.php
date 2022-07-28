@@ -1,6 +1,6 @@
 <?php
 
-if (! function_exists('myEchoPre')) {
+if (!function_exists('myEchoPre')) {
     function myEchoPre($content)
     {
         echo "<pre>", print_r($content), "</pre>";
