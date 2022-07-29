@@ -1,3 +1,7 @@
 <?php
-//difine -> declaración una constante
-define('URL', 'http://mitiederisport.test/');
+//define -> declaración una constante
+//define('URL', 'http://mibodegaweb.test/');
+
+//toma de la variable de entorno
+//define('URL', $_ENV['APP_URL']);
+define('URL', myEnv('APP_URL'));

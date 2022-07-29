@@ -63,7 +63,7 @@
   @include('layouts.partials.footer')
   <!-- End Footer -->
 
-  
+  @include('layouts.partials.preloader')
 
   <!-- Vendor JS Files -->
   <script src="{{URL}}assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -77,7 +77,7 @@
 
   <!-- Template Main JS File -->
   <script src="{{URL}}assets/js/main.js"></script>
-
+  @yield('scripts')
 </body>
 
 </html>
